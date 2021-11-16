@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d2361d0005e8734c851bee9e323851a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  box_Prefab: {fileID: 1699433909424234055, guid: 720e902443a19a44e84544348827be84, type: 3}
+  boxPrefab: {fileID: 1699433909424234055, guid: 720e902443a19a44e84544348827be84, type: 3}
 --- !u!4 &158400838
 Transform:
   m_ObjectHideFlags: 0
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 239259950}
   - component: {fileID: 239259949}
   m_Layer: 0
-  m_Name: "\uCEA1\uCC98"
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -519,8 +519,8 @@ GameObject:
   - component: {fileID: 863316595}
   - component: {fileID: 863316596}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: block
+  m_Name: FloorImage
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 1399081101}
   - component: {fileID: 1399081106}
   m_Layer: 0
-  m_Name: player
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -776,10 +776,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af951b27f03d4142990dc2cd61e01d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
-  jumpforce: 340
-  walkforce: 2
-  maxwalkspeed: 3
 --- !u!58 &1399081106
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -846,8 +842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e073e8889d8c504186e07825696f140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lift: 3
-  life_text: {fileID: 1551537548}
+  lifeText: {fileID: 1551537548}
 --- !u!114 &1551537548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,8 +898,8 @@ GameObject:
   - component: {fileID: 1825161165}
   - component: {fileID: 1825161168}
   m_Layer: 0
-  m_Name: block
-  m_TagString: block
+  m_Name: Floor
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
