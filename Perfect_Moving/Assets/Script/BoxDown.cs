@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class BoxDown : MonoBehaviour
 {
-    GameObject player;      //플레이어 오브젝트
+    GameObject player;              //플레이어 오브젝트
+
+    private float downSpeed = 0.08f; //블럭이 떨어지는 속도
 
 
-    public void Dead() {    //블럭이 파괴될 때 로드되는 함수
+    public void Dead() {            //블럭이 파괴될 때 로드되는 함수
         Destroy(gameObject);
     }
 
@@ -20,10 +22,10 @@ public class BoxDown : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update() {
-        transform.Translate(0, -0.01f, 0);  //아래쪽으로 움직이게 함
+    private void FixedUpdate() {
+        transform.Translate(0, -downSpeed, 0);  //아래쪽으로 움직이게 함
 
-        if (transform.position.y < -5.0f) { //일정 고도 밑으로 내려가면 부서짐
+        if (transform.position.y < -5.0f) {     //일정 고도 밑으로 내려가면 부서짐
             Dead();
         }
     }

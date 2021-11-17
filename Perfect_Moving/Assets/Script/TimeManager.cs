@@ -13,13 +13,13 @@ public class TimeManager : MonoBehaviour
     public Text timeText;       //표시될 텍스트
 
 
-    void Start() {
+    private void Start() {
         obj = GameObject.Find("Player");    //플레이어 오브젝트를 찾음
     }
 
 
     // Update is called once per frame
-    void Update() {
+    private void Update() {
         if (obj != null) {
             t += Time.deltaTime;                //시간변화 체크
             time = Mathf.Round(t * 10) / 10;    //첫번째 자리까지 반올림

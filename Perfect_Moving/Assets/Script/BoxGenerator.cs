@@ -10,10 +10,10 @@ public class BoxGenerator : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update() {
+    private void Update() {
         delta += Time.deltaTime;            //시간 계산
-        if (delta > span) {                 //기준 시간을 지나면 작동
-            delta = 0;
+        if (delta >= span) {                //기준 시간을 지나면 작동
+            delta -= span;
             GameObject go = Instantiate(boxPrefab);         //프리팹 소환
             int px = Random.Range(-5, 5);                   //x좌표를 랜덤으로 지정
             go.transform.position = new Vector3(px, 6, 0);  //만든 프리팹을 이동
