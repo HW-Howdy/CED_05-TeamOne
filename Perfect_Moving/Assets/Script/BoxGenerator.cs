@@ -6,7 +6,7 @@ public class BoxGenerator : MonoBehaviour
 {
     public GameObject boxPrefab;            //떨어지는 블럭
     private float span = 1.0f;              //재생성에 걸리는 시간
-    private float delta = 1.0f;             //현재 지난 시간
+    private float delta = 0f;               //현재 지난 시간
 
 
     // Update is called once per frame
