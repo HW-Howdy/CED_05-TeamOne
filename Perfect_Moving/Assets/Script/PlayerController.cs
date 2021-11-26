@@ -10,8 +10,8 @@ public class PlayerController: MonoBehaviour
 
     private Rigidbody2D rigid2D;        //리기드바디
 
-    private float jumpForce = 450.0f;   //점프가속도
-    private float walkForce = 10.0f;    //이동가속도
+    private float jumpForce = 600.0f;   //점프가속도
+    private float walkForce = 20.0f;    //이동가속도
     private float maxWalkSpeed = 4.0f;  //최대속도
     private int isJump = 1;             //현재 남은 점프 수
     private int maxJump = 1;            //최대 점프 횟수
@@ -56,7 +56,8 @@ public class PlayerController: MonoBehaviour
         //현재 속력이 최대 속력보다 빠르면 재조정함
         if (Mathf.Abs(rigid2D.velocity.x) > maxWalkSpeed) rigid2D.velocity = new Vector2(key * maxWalkSpeed, rigid2D.velocity.y);
 
-        if (key != 0) transform.localScale = new Vector3(key, 1, 1);            //움직이는 방향으로 회전함. 현재는 2D 이미지라 어색해보임
+        if (key == -1) transform.localScale = new Vector3(-2, 2, 2);
+        if (key == 1) transform.localScale = new Vector3(2, 2, 2); //게임 자체가 2D로 진행될꺼라 이미지 회전이 아닌 즉시 반전으로 바꿈
     }
 
 
