@@ -50,14 +50,14 @@ public class PlayerController: MonoBehaviour
 
     // Update is called once per frame
     private void FixedUpdate() {
-        float key = Input.GetAxis("Horizontal");                                //방향을 받아옴. 우측 함수는 a / 왼쪽 화살표 입력에는 -1, d / 오른쪽 화살표 입력에는 1을 반환함
+        float key = Input.GetAxis("Horizontal");                                //방향을 받아옴. 우측 함수는 a / 왼쪽 화살표 입력에는 음수, d / 오른쪽 화살표 입력에는 양수를 반환함
         rigid2D.AddForce(transform.right * key * walkForce);
 
         //현재 속력이 최대 속력보다 빠르면 재조정함
         if (Mathf.Abs(rigid2D.velocity.x) > maxWalkSpeed) rigid2D.velocity = new Vector2(key * maxWalkSpeed, rigid2D.velocity.y);
 
-        if (key == -1) transform.localScale = new Vector3(-2, 2, 2);
-        if (key == 1) transform.localScale = new Vector3(2, 2, 2); //게임 자체가 2D로 진행될꺼라 이미지 회전이 아닌 즉시 반전으로 바꿈
+        if (key < 0) transform.localScale = new Vector3(-2, 2, 2);
+        else if (key > 0) transform.localScale = new Vector3(2, 2, 2);              //게임 자체가 2D로 진행될꺼라 이미지 회전이 아닌 즉시 반전으로 바꿈
     }
 
 
