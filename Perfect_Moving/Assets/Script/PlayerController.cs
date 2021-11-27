@@ -11,6 +11,7 @@ public class PlayerController: MonoBehaviour
     private int life = 3;               //목숨
 
     private Rigidbody2D rigid2D;        //리기드바디
+    private SpriteRenderer sprite;      //스프라이트
 
     private Animator anim;              //애니메이션 지정자
 
@@ -25,13 +26,16 @@ public class PlayerController: MonoBehaviour
 
     private float defenseTime = 1.0f;   //적과 부딫힌 후 무적 시간
     private float t = 0.0f;             //적과 부딪힌 후 지난 시간
+    private float blankTime = 0.1f;     //깜빡이는 주기/2
+    private float timeToken = 0.1f;     //깜빡이게 하기 위한 임시 저장 변수
+    private bool isBlank = true;        //현재 투명해지는지 여부
     private bool defense = false;       //현재 무적 여부
 
     // Start is called before the first frame update
     private void Start() {
         rigid2D = GetComponent<Rigidbody2D>();  //리기드바디 연결
-
         anim = GetComponent<Animator>();        //애니메이터 연결
+        sprite = GetComponent<SpriteRenderer>();//스프라이트 연결
 
         life = maxLife;                         //생명 초기화
     }
@@ -40,6 +44,8 @@ public class PlayerController: MonoBehaviour
     private void Hit() {            //적과 부딪히면 호출되는 함수
         life--;                     //생명 1 감소
         defense = true;             //무적 활성화
+        timeToken = 0.1f;           //임시 저장 변수 초기화
+        isBlank = true;             //초기화
         if (life == 0) Dead();      //만약 0이라면 사망
     }
 
@@ -48,8 +54,8 @@ public class PlayerController: MonoBehaviour
         if (life < maxLife) life++;
 	}
 
-    private void Dead() {        //사망시 호출되는 함수
-        Destroy(gameObject);    //이 오브젝트를 파괴함
+    private void Dead() {           //사망시 호출되는 함수
+        Destroy(gameObject);        //이 오브젝트를 파괴함
     }
 
 
@@ -91,8 +97,19 @@ public class PlayerController: MonoBehaviour
 
         if (defense) {                                                          //무적이라면
             t += Time.deltaTime;                                                //시간경과 체크
+            if(isBlank) {                                                       //투명해지도록
+                sprite.color = new Color(1, 1, 1, ((timeToken - t) * 10));
+            }
+            else {                                                              //불투명해지도록
+                sprite.color = new Color(1, 1, 1, 1 - ((timeToken - t) * 10));
+            }
+            if(t > timeToken) {                                                 //주기/2 마다 변하는 방향을 바꿈
+                timeToken += blankTime;
+                isBlank = !isBlank;
+			}
             if(t >= defenseTime) {                                              //무적 시간이 지나면 해제
                 defense = false;
+                sprite.enabled = true;
                 t = 0.0f;
 			}
 		}

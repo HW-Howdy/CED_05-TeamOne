@@ -20,18 +20,19 @@ public class ThornGenerator : MonoBehaviour
     private int minNum = 0;                 //가시 종류의 최소
     private int maxNum = 1;                 //가시 종류의 최대+1
 
-    // Start is called before the first frame update
-    private void Update()
-    {
+	private void Start() {
         area = GetComponent<BoxCollider2D>();   //생성 범위
+    }
 
+
+	// Start is called before the first frame update
+	private void Update()
+    {
         nowRepeat += Time.deltaTime;            //시간 계산
         if(nowRepeat >= repeatTime) {           //repeatTime마다 가시 생성
             nowRepeat -= repeatTime;
             for(int i = 0; i < count; i++) Spawn();
 		}
-
-        area.enabled = false;
     }
 
     private Vector3 GetRandomPosition()     //Box콜리더 만큼의 범위 내 랜덤한 위치 반환
