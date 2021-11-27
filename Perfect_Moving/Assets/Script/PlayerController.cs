@@ -10,8 +10,10 @@ public class PlayerController: MonoBehaviour
 
     private Rigidbody2D rigid2D;        //리기드바디
 
-    private float jumpForce = 450.0f;   //점프가속도
-    private float walkForce = 10.0f;    //이동가속도
+    private Animator anim;              //애니메이션 지정자
+
+    private float jumpForce = 600.0f;   //점프가속도
+    private float walkForce = 20.0f;    //이동가속도
     private float maxWalkSpeed = 4.0f;  //최대속도
     private int isJump = 1;             //현재 남은 점프 수
     private int maxJump = 1;            //최대 점프 횟수
@@ -22,7 +24,9 @@ public class PlayerController: MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        rigid2D = GetComponent<Rigidbody2D>(); //리기드바디 생성
+        rigid2D = GetComponent<Rigidbody2D>();  //리기드바디 연결
+
+        anim = GetComponent<Animator>();        //애니메이터 연결
     }
 
 
@@ -44,19 +48,25 @@ public class PlayerController: MonoBehaviour
 
 
 	private void OnCollisionEnter2D(Collision2D collision) {                    //무언가와 맞닿을 때 호출되는 함수
-        if (collision.gameObject.CompareTag("Floor")) isJump = maxJump;         //바닥과 맞닿으면 점포 횟수 충전
+        if (collision.gameObject.CompareTag("Floor")) {
+            isJump = maxJump;                                                   //바닥과 맞닿으면 점포 횟수 충전
+            anim.SetBool("IsJump", false);                                      //애니메이션 제어
+        }
     }
 
 
     // Update is called once per frame
     private void FixedUpdate() {
-        float key = Input.GetAxis("Horizontal");                                //방향을 받아옴. 우측 함수는 a / 왼쪽 화살표 입력에는 -1, d / 오른쪽 화살표 입력에는 1을 반환함
+        float key = Input.GetAxis("Horizontal");                                //방향을 받아옴. 우측 함수는 a / 왼쪽 화살표 입력에는 음수, d / 오른쪽 화살표 입력에는 양수를 반환함
         rigid2D.AddForce(transform.right * key * walkForce);
 
         //현재 속력이 최대 속력보다 빠르면 재조정함
         if (Mathf.Abs(rigid2D.velocity.x) > maxWalkSpeed) rigid2D.velocity = new Vector2(key * maxWalkSpeed, rigid2D.velocity.y);
 
-        if (key != 0) transform.localScale = new Vector3(key, 1, 1);            //움직이는 방향으로 회전함. 현재는 2D 이미지라 어색해보임
+        if (key < 0) transform.localScale = new Vector3(-2, 2, 2);
+        else if (key > 0) transform.localScale = new Vector3(2, 2, 2);          //게임 자체가 2D로 진행될꺼라 이미지 회전이 아닌 즉시 반전으로 바꿈
+
+        anim.SetFloat("MoveX", key);                                            //애니메이션 제어
     }
 
 
@@ -64,6 +74,7 @@ public class PlayerController: MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && (isJump != 0)) {                 //점프키(space)를 누른 상태 및 점프 횟수가 남아있으면
             rigid2D.AddForce(transform.up * jumpForce);                         //위쪽 방향으로 점프가속도만큼 가속함
             isJump -= 1;                                                        //점프 횟수 -1
+            anim.SetBool("IsJump", true);                                       //애니메이션 제어
         }
 
         if (defense) {                                                          //무적이라면
@@ -80,7 +91,8 @@ public class PlayerController: MonoBehaviour
 
 
 	public int LIFE {           //private 변수 life에 접근하기 위한 변수
-        get { return life; }    
+        get { return life; } 
+        set { life = value;  }
 	}
 
     public bool DEFENSE {       //private 변수 defense애 접근하기 위한 변수
