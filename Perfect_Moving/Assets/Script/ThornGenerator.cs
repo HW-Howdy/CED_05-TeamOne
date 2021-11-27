@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThornSpawner : MonoBehaviour
+public class ThornGenerator : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] prefabs;           //생성시킬 오브젝트 배열로 선언시 다양한 오브젝트 선언가능
@@ -11,8 +11,9 @@ public class ThornSpawner : MonoBehaviour
 
     private BoxCollider2D area;             //박스콜라이더의 사이즈 가져오기
     private int count = 1;                  //한번에 생성되는 오브젝트의 수
-    private float repeatTime = 3.0f;        //생성주기
 
+    [SerializeField]
+    private float repeatTime = 3.0f;        //생성주기
     [SerializeField]
     private float nowRepeat = -17.0f;       //현재 흐른 시간
 
@@ -40,7 +41,7 @@ public class ThornSpawner : MonoBehaviour
 
         float posX = basePosition.x + Random.Range(-size.x / 2f, size.x / 2f);
         float posY = basePosition.y + Random.Range(-size.y / 2f, size.y / 2f);
-        float posZ = basePosition.z + Random.Range(-size.z / 2f, size.z / 2f);
+        float posZ = 0;
 
         Vector3 spawnPos = new Vector3(posX, posY, posZ);
 

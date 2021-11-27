@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController: MonoBehaviour
 {
+    [SerializeField]
+    private int maxLife = 3;            //최대생명
     private int life = 3;               //목숨
 
     private Rigidbody2D rigid2D;        //리기드바디
@@ -15,35 +17,45 @@ public class PlayerController: MonoBehaviour
     private float jumpForce = 600.0f;   //점프가속도
     private float walkForce = 20.0f;    //이동가속도
     private float maxWalkSpeed = 4.0f;  //최대속도
-    private int isJump = 1;             //현재 남은 점프 수
+
+    [SerializeField]
     private int maxJump = 1;            //최대 점프 횟수
+    private int isJump = 1;             //현재 남은 점프 수
+
 
     private float defenseTime = 1.0f;   //적과 부딫힌 후 무적 시간
     private float t = 0.0f;             //적과 부딪힌 후 지난 시간
     private bool defense = false;       //현재 무적 여부
 
     // Start is called before the first frame update
-    void Start() {
+    private void Start() {
         rigid2D = GetComponent<Rigidbody2D>();  //리기드바디 연결
 
         anim = GetComponent<Animator>();        //애니메이터 연결
+
+        life = maxLife;                         //생명 초기화
     }
 
 
-    public void Hit() {         //적과 부딪히면 호출되는 함수
-        life--;                 //생명 1 감소
-        defense = true;         //무적 활성화
-        if (life == 0) Dead();  //만약 0이라면 사망
+    private void Hit() {            //적과 부딪히면 호출되는 함수
+        life--;                     //생명 1 감소
+        defense = true;             //무적 활성화
+        if (life == 0) Dead();      //만약 0이라면 사망
     }
 
+    
+    private void GetLife() {        //목숨을 얻을 시 호출되는 함수
+        if (life < maxLife) life++;
+	}
 
-    public void Dead() {        //사망시 호출되는 함수
+    private void Dead() {        //사망시 호출되는 함수
         Destroy(gameObject);    //이 오브젝트를 파괴함
     }
 
 
     private void OnTriggerEnter2D(Collider2D collider) {                        //무언가를 통과할 때 호출되는 함수
         if (collider.CompareTag("Enemy")&&!defense) Hit();                      //적을 통과하면 생명이 깎임
+        if (collider.CompareTag("Life")) GetLife();
     }
 
 
