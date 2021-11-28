@@ -9,6 +9,7 @@ public class StaySniperGenerator : MonoBehaviour
 
     private BoxCollider2D area;             //박스콜라이더의 사이즈 가져오기
     private int count = 1;                  //한번에 생성되는 오브젝트의 수
+    private int maxCount = 15;              //최대제한
 
     [SerializeField]
     private float minRepeatTime = 3.0f;     //최소 생성주기
@@ -21,23 +22,32 @@ public class StaySniperGenerator : MonoBehaviour
     private int minNum = 0;                 //한점 저격 종류의 최소
     private int maxNum = 1;                 //한점 저격 종류의 최대+1
 
+    [SerializeField]
+    private float upgradeTime = 15.0f;      //강화에 걸리는 시간
+    [SerializeField]
+    private float nowUpgrade = -5.0f;       //현재 지난 시간
+
     // Start is called before the first frame update
     private void Start()
     {
         area = GetComponent<BoxCollider2D>();
-
     }
 
     // Update is called once per frame
     private void Update()
     {
         nowRepeat += Time.deltaTime;
-        if(nowRepeat >= nowRepeatTime) {
+        if (count < maxCount) nowUpgrade += Time.deltaTime;
+        if (nowRepeat >= nowRepeatTime) {
             nowRepeat -= nowRepeatTime;
             nowRepeatTime = Random.Range(minRepeatTime, maxRepeatTime);
             for (int i = 0; i < count; i++) {
                 Spawn();
             }
+        }
+        if(nowUpgrade >= upgradeTime) {
+            nowUpgrade -= upgradeTime;
+            count += 1;
         }
     }
 

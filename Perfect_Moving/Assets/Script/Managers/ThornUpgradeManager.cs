@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BoxUpgradeManager : MonoBehaviour
+public class ThornUpgradeManager : MonoBehaviour
 {
 	[SerializeField]
 	static private Text upgradeText;
@@ -20,34 +20,31 @@ public class BoxUpgradeManager : MonoBehaviour
 		upgradeText = this.GetComponent<Text>();
 	}
 
-	static public void BoxUpgradeText(int Num) {
-		switch(Num) {
+	static public void ThornUpgradeText(int Num) {
+		switch (Num) {
 			case 0:
 				upgradeText.text = "생산 시간 감소!";
 				break;
 			case 1:
-				upgradeText.text = "낙하 속도 증가!";
-				break;
-			case 2:
 				upgradeText.text = "생산 개수 증가!";
 				break;
-			case 3:
-				upgradeText.text = "상자 크기 증가!";
+			case 2:
+				upgradeText.text = "가시 크기 증가!";
 				break;
 		}
 		nowTime = 0.0f;
-		upgradeText.color = new Color(0, 0, 1, 1);
+		upgradeText.color = new Color(1, 0, 0, 1);
 	}
 
 	private void Update() {
-		if(nowTime < removeTime) {
+		if (nowTime < removeTime) {
 			nowTime += Time.deltaTime;
-			if(nowTime >= removeStart) {
-				upgradeText.color = new Color(0, 0, 1, removeTime - nowTime);
+			if (nowTime >= removeStart) {
+				upgradeText.color = new Color(1, 0, 0, removeTime - nowTime);
 			}
 		}
 		else {
-			upgradeText.color = new Color(0, 0, 1, 0);
+			upgradeText.color = new Color(1, 0, 0, 0);
 		}
 	}
 }

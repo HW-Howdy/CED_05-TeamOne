@@ -23,7 +23,7 @@ public class BoxDown : MonoBehaviour
     private void FixedUpdate() {
         transform.Translate(0, -downSpeed, 0);  //아래쪽으로 움직이게 함
 
-        if (transform.position.y < -5.0f) {     //일정 고도 밑으로 내려가면 부서짐
+        if (transform.position.y < -7.0f) {     //일정 고도 밑으로 내려가면 부서짐
             Dead();
         }
     }

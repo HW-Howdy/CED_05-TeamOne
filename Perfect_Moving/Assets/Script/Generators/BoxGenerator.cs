@@ -11,7 +11,9 @@ public class BoxGenerator : MonoBehaviour
     private float upgradeRepeatTime = 0.1f; //한 번 강화되는 시간
     private float nowTime = 0f;             //현재 지난 시간
 
+    [SerializeField]
     private float upgradeTime = 10.0f;      //강화에 걸리는 시간
+    [SerializeField]
     private float nowUpgrade = 0.0f;        //현재 지난 시간
 
     private int count = 1;                  //한번에 소환되는 개수
@@ -19,6 +21,7 @@ public class BoxGenerator : MonoBehaviour
     private float upgradeSize = 0.1f;       //한 번 강화되는 크기
     private float downSpeed = 0.05f;        //떨어지는 속도
     private float upgradeDownSpeed = 0.01f; //한 번 강화되는 속도
+    private float maxDownSpeed = 0.12f;     //속도 상한선
 
     private int upgradeNum = 4;             //블럭의 업그레이드 종류
 
@@ -53,8 +56,10 @@ public class BoxGenerator : MonoBehaviour
                         }
                         break;
                     case 1:
-                        downSpeed += upgradeDownSpeed;
-                        i = false;
+                        if (downSpeed < maxDownSpeed) {
+                            downSpeed += upgradeDownSpeed;
+                            i = false;
+                        }
                         break;
                     case 2:
                         count += 1;

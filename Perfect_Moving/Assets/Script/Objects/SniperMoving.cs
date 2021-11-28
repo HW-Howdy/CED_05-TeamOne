@@ -5,7 +5,7 @@ using UnityEngine;
 public class SniperMoving : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 2.2f;
+    private float speed = 4f;
     [SerializeField]
     private GameObject target;
     [SerializeField]
@@ -16,6 +16,7 @@ public class SniperMoving : MonoBehaviour
     private void Start()
     {
         target = GameObject.Find("Player");
+        if(target != null) this.transform.position = target.transform.position;
     }
 
     private void FixedUpdate()
@@ -40,5 +41,14 @@ public class SniperMoving : MonoBehaviour
 
     public void Shot() {        //빨간색(발사상태) 호출
         hitBox.SetActive(true);
+	}
+
+	public void Remove() {      //애니메이션이 끝날 때 호출
+        Destroy(gameObject);
+	}
+
+    public float SPEED {
+        get { return speed; }
+        set { speed = value; }
 	}
 }
