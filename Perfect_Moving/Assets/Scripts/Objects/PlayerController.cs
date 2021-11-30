@@ -51,7 +51,7 @@ public class PlayerController: MonoBehaviour
 
     
     private void GetLife() {        //목숨을 얻을 시 호출되는 함수
-        if (life < maxLife) life++;
+        life = maxLife;
 	}
 
     private void Dead() {           //사망시 호출되는 함수
