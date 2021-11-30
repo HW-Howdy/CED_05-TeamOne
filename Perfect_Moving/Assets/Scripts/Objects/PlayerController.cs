@@ -55,9 +55,7 @@ public class PlayerController: MonoBehaviour
 	}
 
     private void Dead() {           //사망시 호출되는 함수
-
-
-
+        PlayerPrefs.SetFloat("NowScore", TimeManager.TIME);
         SceneManager.LoadScene("OverScene");
         Destroy(gameObject);        //이 오브젝트를 파괴함
     }

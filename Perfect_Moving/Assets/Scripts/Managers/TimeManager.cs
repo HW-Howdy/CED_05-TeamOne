@@ -8,7 +8,7 @@ public class TimeManager : MonoBehaviour
     GameObject obj;             //플레이어 오브젝트를 받아오긴 위한 변수
 
     private float t = 0.0f;     //현재 지난 시간
-    private float time = 0.0f;  //표시 및 계산에 사용될 시간
+    static private float time = 0.0f;  //표시 및 계산에 사용될 시간
 
     public Text timeText;       //표시될 텍스트
 
@@ -28,7 +28,7 @@ public class TimeManager : MonoBehaviour
         timeText.text = ((int)(time / 60)).ToString() + " : " + (Mathf.Round((time * 10) % 600) / 10).ToString();
     }
 
-    public float TIME {         //private 변수 time에 접근하기 위한 변수
+    static public float TIME {         //private 변수 time에 접근하기 위한 변수
         get { return time; }
 	}
 }
