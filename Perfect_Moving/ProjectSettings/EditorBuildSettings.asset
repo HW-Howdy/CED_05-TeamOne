@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: fb046e4888321834b9ace3780f11429f
+  - enabled: 1
+    path: Assets/Scenes/OverScene.unity
+    guid: 7efe3beb3720835438580a5df309b465
   m_configObjects: {}

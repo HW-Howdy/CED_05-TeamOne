@@ -15,7 +15,6 @@ public class LifeManager : MonoBehaviour
     private void Update() {     //플레이어의 life 값을 받아와 출력함
         if (obj != null) {
             lifeText.text = "Life : " + obj.GetComponent<PlayerController>().LIFE;
-            if (obj.GetComponent<PlayerController>().DEFENSE) lifeText.text += " 부딪힘!";
         }
         else lifeText.text = "Life : ERROR";
     }
