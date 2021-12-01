@@ -1036,7 +1036,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC74C\uC545 \uC815\uBCF4 : Tobyfox - You Idiot, a_hisa - colors, a_hisa
+  m_Text: "\uC74C\uC545 \uC815\uBCF4 : Toby Fox - You Idiot, a_hisa - colors, a_hisa
     - Physical Emotion\nMade By CED_05_TeamOne"
 --- !u!222 &1893889757
 CanvasRenderer:
@@ -1077,7 +1077,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

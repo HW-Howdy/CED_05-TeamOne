@@ -5,31 +5,49 @@
 		<blah>2 "실험 진행자. 구어체"</blah>
 	</dummy>
 	<type1>
-		<saying>저번 실험체랑은 정반대의 반응이네. 폐기 처리 요청함. - 승인.</saying>
-		<saying>무의미한 결과네. 실험체 폐기 처리 요청함. - 승인.</saying>
+		<saying>저번 실험체랑은 정반대의 반응이네. 
+폐기 처리 요청함. - 승인.</saying>
+		<saying>무의미한 결과네. 
+실험체 폐기 처리 요청함. - 승인.</saying>
 	</type1>
 	<type2>
-		<saying>그렇게 살고 싶어했으면서 이런 결과라니. 무의미하네.</saying>
-		<saying>노력하는 듯 보였으나 금방 죽었음. 연구 자료 및 실험체 폐기 처분하겠음. - 승인.</saying>
+		<saying>그렇게 살고 싶어했으면서 이런 결과라니. 
+무의미하네.</saying>
+		<saying>노력하는 듯 보였으나 금방 죽었음. 
+연구 자료 및 실험체 폐기 처분하겠음. - 승인.</saying>
 	</type2>
 	<type3>
-		<saying>썩 좋은 결과는 아니네. 관련 자료 파기 및 실험체 폐기 요청함. - 승인.</saying>
+		<saying>썩 좋은 결과는 아니네. 
+관련 자료 파기 및 실험체 폐기 요청함. - 승인.</saying>
 	</type3>
 	<type4>
-		<saying>나쁘지 않은데? 관련 자료 보관을 요청함. - 승인.</saying>
-		<saying>이정도면 다음번에도 써먹을 수 있겠어. 실험체 보존을 요청함. - 거부.</saying>
-		<saying>나쁘지 않은 결과인데... 다음 번을 기대해보지.</saying>
+		<saying>나쁘지 않은데? 
+그래도 더 잘할 수 있지?</saying>
+		<saying>이정도면 다음번에도 써먹을 수 있겠어. 
+실험체 복구을 요청함. - 거부.</saying>
+		<saying>나쁘지 않은 결과네.
+관련 자료 보관을 요청함. - 승인.
+		</saying>
 	</type4>
 	<type5>
-		<saying></saying>
+		<saying>괜찮았어.
+다음번엔 더 오래 살아남길 바래.</saying>
+		<saying>이 정도면 훌륭하네.
+실험체 복구을 요청함. - 거부.</saying>
 	</type5>
 	<type6>
-		<saying></saying>
+		<saying>이정도까지 해내다니!
+이번 실험체는 굉장한데!</saying>
+		<saying>관련 자료 보관을 요청함 - 승인.
+해당 실험체의 복구를 요청함 - 거부.
+...실험체의 복구를 요청함. - 거부.</saying>
 	</type6>
 	<type7>
-		<saying></saying>
+		<saying>해당 실험체의 복구를 요청함. - 거부.
+해당 실험체의 보존을 요청함. - 승인.
+...복원을 요청함. - 거부.</saying>
 	</type7>
 	<type8>
-		<saying></saying>
+		<saying>전능하신 아카르트시여 영원한 빛으로 날 보호하소서</saying>
 	</type8>
 </dataroot>

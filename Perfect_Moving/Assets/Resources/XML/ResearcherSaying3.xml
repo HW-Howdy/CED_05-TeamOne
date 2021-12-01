@@ -5,32 +5,50 @@
 		<blah>3 "실험 기계 AI"</blah>
 	</dummy>
 	<type1>
-		<saying>실험체 의식 확인 불가. 폐기 처분.</saying>
-		<saying>실험체의 저항 미확인. 폐기 처분.</saying>
+		<saying>실험체 의식 확인 불가. 
+폐기 처분.</saying>
+		<saying>실험체의 저항 미확인. 
+폐기 처분.</saying>
 	</type1>
 	<type2>
-		<saying>실험체 의식 확인 불가. 폐기 처분.</saying>
-		<saying>평균에 훨씬 못 미치는 결과. 부적격 실험체 폐기.</saying>
+		<saying>실험체 의식 확인 불가.
+폐기 처분.</saying>
+		<saying>평균에 훨씬 못 미치는 결과. 
+부적격 실험체 폐기.</saying>
 	</type2>
 	<type3>
-		<saying>실험체 의식 확인 불가. 폐기 처분.</saying>
-		<saying>평균에 못 미치는 결과. 실험체 폐기.</saying>
-		<saying>실험체 생체반응 확인 불가. 폐기 처분.</saying>
+		<saying>실험체 의식 확인 불가. 
+폐기 처분.</saying>
+		<saying>평균에 못 미치는 결과. 
+실험체 폐기.</saying>
+		<saying>실험체 생체반응 확인 불가. 
+폐기 처분.</saying>
 	</type3>
 	<type4>
-		<saying>실험체 의식 확인 불가. 폐기 처분.</saying>
-		<saying>평균보다 모자라는 결과. 실험체 폐기.</saying>
+		<saying>실험체 의식 확인 불가. 
+폐기 처분.</saying>
+		<saying>평균보다 모자라는 결과. 
+실험체 폐기.</saying>
 	</type4>
 	<type5>
-		<saying></saying>
+		<saying>실험체가 정신을 잃었음.
+실험 중단. 폐기.</saying>
+		<saying>기대한 만큼의 결과.
+충분한 데이터 수집. 남은 도구는 폐기.</saying>
 	</type5>
 	<type6>
-		<saying></saying>
+		<saying>실험체가 쓰러짐. 즉시 포획.
+해당 실험체를 폐기 조치하겠음.</saying>
+		<saying>기대 이상의 결과.
+해당 실험체의 정보 저장.
+실험체 폐기.</saying>
 	</type6>
 	<type7>
-		<saying></saying>
+		<saying>예상을 초월한 결과.
+해당 실험체 즉시 포획.
+실험체의 정보를 보존.</saying>
 	</type7>
 	<type8>
-		<saying></saying>
+		<saying>THANK YOU FOR PLAYING</saying>
 	</type8>
 </dataroot>

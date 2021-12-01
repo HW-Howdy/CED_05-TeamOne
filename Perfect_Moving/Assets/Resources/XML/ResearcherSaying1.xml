@@ -5,31 +5,48 @@
 		<blah>1 "중간 관리자. 무덤덤"</blah>
 	</dummy>
 	<type1>
-		<saying>실험체가 삶에 대한 의지를 상실함. 실험체 폐기.</saying>
-		<saying>이전과 비슷한 반응을 보임. 이번 실험체는 폐기.</saying>
+		<saying>실험체가 삶에 대한 의지를 상실함. 
+실험체 폐기.</saying>
+		<saying>이전과 비슷한 반응을 보임. 
+이번 실험체는 폐기.</saying>
 	</type1>
 	<type2>
-		<saying>실험체가 살기 위해 노력함. 실패. 폐기함.</saying>
-		<saying>실험체가 분주히 노력함. 의미있진 않았음. 폐기함.</saying>
+		<saying>실험체가 생존을 위해 노력함. 
+실패. 폐기함.</saying>
+		<saying>실험체가 분주히 노력함. 
+의미있진 않았음. 폐기함.</saying>
 	</type2>
 	<type3>
-		<saying>결과가 평균에 미치지 못함. 실험체 폐기 처리.</saying>
-		<saying>작은 자료라도 소중한 자료. 관련 자료 보관 요청. - 거부됨.</saying>
+		<saying>결과가 평균에 미치지 못함. 
+실험체 폐기 처리.</saying>
+		<saying>작은 자료라도 소중한 자료. 
+관련 자료 보관 요청. - 거부됨.</saying>
 	</type3>
 	<type4>
-		<saying>유의미한 결과. 관련 자료 보관 요청. - 승인됨.</saying>
-		<saying>다음 실험의 발전이 기대되는 결과. 관련 자료 보관 요청. - 승인됨.</saying>
+		<saying>유의미한 결과. 
+관련 자료 보존 요청. - 거부됨.
+...보관 요청. - 승인됨.</saying>
+		<saying>다음 실험의 발전이 기대되는 결과. 
+관련 자료 보관 요청. - 승인됨.</saying>
 	</type4>
 	<type5>
-		<saying></saying>
+		<saying>만족스러운 결과.
+관련 자료 보관 요청. - 승인됨.</saying>
+		<saying>충분한 양의 자료 확보.
+해당 실험 진행 결과 보존 요청. - 승인됨.</saying>
 	</type5>
 	<type6>
-		<saying></saying>
+		<saying>기대 이상의 결과.
+해당 실험체의 복구을 요청함. - 거부됨.</saying>
+		<saying>평균 이상의 기록.
+관련 자료 보관 요청 - 승인됨.
+실험체의 복구 요청 - 거부됨.</saying>
 	</type6>
 	<type7>
-		<saying></saying>
+		<saying>믿을 수 없는 결과.
+이번 실험이 마지막일 수도 있겠음.</saying>
 	</type7>
 	<type8>
-		<saying></saying>
+		<saying>Made By PBU-CED-05-TeamOne</saying>
 	</type8>
 </dataroot>

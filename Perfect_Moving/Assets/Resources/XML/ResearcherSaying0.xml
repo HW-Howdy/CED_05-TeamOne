@@ -5,32 +5,53 @@
 		<blah>0 "총 책임자. BOSS"</blah>
 	</dummy>
 	<type1>=
-		<saying>실험체 관리 부실. 유의미한 결과를 내지 못함.</saying>
-		<saying>무의미한 결과. 관련 자료 파기.</saying>
+		<saying>실험체 관리 부실. 
+유의미한 결과를 내지 못함.</saying>
+		<saying>무의미한 결과. 
+관련 자료 파기.</saying>
 	</type1>
 	<type2>
-		<saying>충분하지 않은 결과. 실험 자료 및 관련 도구 처분.</saying>
-		<saying>의미없는 미약한 저항. 유의미한 결과는 아님.</saying>
+		<saying>충분하지 않은 결과. 
+실험 자료 및 관련 도구 처분.</saying>
+		<saying>의미없는 미약한 저항. 
+유의미한 결과는 아님.</saying>
 	</type2>
 	<type3>
-		<saying>나쁜 결과. 관련 자료 및 실험체 폐기 처분.</saying>
-		<saying>무의미한 실험체의 반응. 관련 자료 파기.</saying>
-		<saying>연구용으로는 좋지 않은 결과. 실험체 폐기 처리.</saying>
+		<saying>나쁜 결과. 
+관련 자료 및 실험체 폐기 처분.</saying>
+		<saying>무의미한 실험체의 반응. 
+관련 자료 파기.</saying>
+		<saying>연구용으로는 좋지 않은 결과. 
+실험체 폐기 처리.</saying>
 	</type3>
 	<type4>
-		<saying>나쁘진 않은 결과. 관련 자료 보존. 실험체 폐기 처분.</saying>
-		<saying>흥미로운 실험체의 반응. 관련 자료는 보존.</saying>
+		<saying>나쁘진 않은 결과. 
+관련 자료 보관. 
+실험체 폐기 처분.</saying>
+		<saying>흥미로운 실험체의 반응. 
+관련 자료를 보관하도록.</saying>
 	</type4>
 	<type5>
-		<saying></saying>
+		<saying>기대했던 결과.
+관련 자료 보존.
+실험체 필히 폐기 처분.</saying>
+		<saying>흥미로운 실험체의 반응.
+관련 자료 보존 명령.</saying>
 	</type5>
 	<type6>
-		<saying></saying>
+		<saying>훌륭한 결과.
+관련 자료 보존할 것.
+실험체 정보 보존.</saying>
+		<saying>예상을 뛰어넘은 결과.
+실험체의 정보를 보존하고
+해당 실험체는 무조건 폐기할 것.</saying>
 	</type6>
 	<type7>
-		<saying></saying>
+		<saying>성공적인 실험.
+해당 실험과 관련된 모든 것 보존.
+해당 실험체에 각별한 주의를 기울일 것.</saying>
 	</type7>
 	<type8>
-		<saying></saying>
+		<saying>무야호~!</saying>
 	</type8>
 </dataroot>
