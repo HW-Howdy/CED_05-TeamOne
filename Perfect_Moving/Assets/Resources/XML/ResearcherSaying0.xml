@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dummy>
+		<saying></saying>
+		<blah>0 "총 책임자. BOSS"</blah>
+	</dummy>
+	<type1>=
+		<saying>실험체 관리 부실. 유의미한 결과를 내지 못함.</saying>
+		<saying>무의미한 결과. 관련 자료 파기.</saying>
+	</type1>
+	<type2>
+		<saying>충분하지 않은 결과. 실험 자료 및 관련 도구 처분.</saying>
+		<saying>의미없는 미약한 저항. 유의미한 결과는 아님.</saying>
+	</type2>
+	<type3>
+		<saying>나쁜 결과. 관련 자료 및 실험체 폐기 처분.</saying>
+		<saying>무의미한 실험체의 반응. 관련 자료 파기.</saying>
+		<saying>연구용으로는 좋지 않은 결과. 실험체 폐기 처리.</saying>
+	</type3>
+	<type4>
+		<saying>나쁘진 않은 결과. 관련 자료 보존. 실험체 폐기 처분.</saying>
+		<saying>흥미로운 실험체의 반응. 관련 자료는 보존.</saying>
+	</type4>
+	<type5>
+		<saying></saying>
+	</type5>
+	<type6>
+		<saying></saying>
+	</type6>
+	<type7>
+		<saying></saying>
+	</type7>
+	<type8>
+		<saying></saying>
+	</type8>
+</dataroot>

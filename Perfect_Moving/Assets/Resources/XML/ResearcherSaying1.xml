@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dummy>
+		<saying></saying>
+		<blah>1 "중간 관리자. 무덤덤"</blah>
+	</dummy>
+	<type1>
+		<saying>실험체가 삶에 대한 의지를 상실함. 실험체 폐기.</saying>
+		<saying>이전과 비슷한 반응을 보임. 이번 실험체는 폐기.</saying>
+	</type1>
+	<type2>
+		<saying>실험체가 살기 위해 노력함. 실패. 폐기함.</saying>
+		<saying>실험체가 분주히 노력함. 의미있진 않았음. 폐기함.</saying>
+	</type2>
+	<type3>
+		<saying>결과가 평균에 미치지 못함. 실험체 폐기 처리.</saying>
+		<saying>작은 자료라도 소중한 자료. 관련 자료 보관 요청. - 거부됨.</saying>
+	</type3>
+	<type4>
+		<saying>유의미한 결과. 관련 자료 보관 요청. - 승인됨.</saying>
+		<saying>다음 실험의 발전이 기대되는 결과. 관련 자료 보관 요청. - 승인됨.</saying>
+	</type4>
+	<type5>
+		<saying></saying>
+	</type5>
+	<type6>
+		<saying></saying>
+	</type6>
+	<type7>
+		<saying></saying>
+	</type7>
+	<type8>
+		<saying></saying>
+	</type8>
+</dataroot>

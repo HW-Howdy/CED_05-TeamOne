@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dummy>
+		<saying></saying>
+		<blah>3 "실험 기계 AI"</blah>
+	</dummy>
+	<type1>
+		<saying>실험체 의식 확인 불가. 폐기 처분.</saying>
+		<saying>실험체의 저항 미확인. 폐기 처분.</saying>
+	</type1>
+	<type2>
+		<saying>실험체 의식 확인 불가. 폐기 처분.</saying>
+		<saying>평균에 훨씬 못 미치는 결과. 부적격 실험체 폐기.</saying>
+	</type2>
+	<type3>
+		<saying>실험체 의식 확인 불가. 폐기 처분.</saying>
+		<saying>평균에 못 미치는 결과. 실험체 폐기.</saying>
+		<saying>실험체 생체반응 확인 불가. 폐기 처분.</saying>
+	</type3>
+	<type4>
+		<saying>실험체 의식 확인 불가. 폐기 처분.</saying>
+		<saying>평균보다 모자라는 결과. 실험체 폐기.</saying>
+	</type4>
+	<type5>
+		<saying></saying>
+	</type5>
+	<type6>
+		<saying></saying>
+	</type6>
+	<type7>
+		<saying></saying>
+	</type7>
+	<type8>
+		<saying></saying>
+	</type8>
+</dataroot>

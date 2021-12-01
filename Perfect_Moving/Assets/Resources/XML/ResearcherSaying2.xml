@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dummy>
+		<saying></saying>
+		<blah>2 "실험 진행자. 구어체"</blah>
+	</dummy>
+	<type1>
+		<saying>저번 실험체랑은 정반대의 반응이네. 폐기 처리 요청함. - 승인.</saying>
+		<saying>무의미한 결과네. 실험체 폐기 처리 요청함. - 승인.</saying>
+	</type1>
+	<type2>
+		<saying>그렇게 살고 싶어했으면서 이런 결과라니. 무의미하네.</saying>
+		<saying>노력하는 듯 보였으나 금방 죽었음. 연구 자료 및 실험체 폐기 처분하겠음. - 승인.</saying>
+	</type2>
+	<type3>
+		<saying>썩 좋은 결과는 아니네. 관련 자료 파기 및 실험체 폐기 요청함. - 승인.</saying>
+	</type3>
+	<type4>
+		<saying>나쁘지 않은데? 관련 자료 보관을 요청함. - 승인.</saying>
+		<saying>이정도면 다음번에도 써먹을 수 있겠어. 실험체 보존을 요청함. - 거부.</saying>
+		<saying>나쁘지 않은 결과인데... 다음 번을 기대해보지.</saying>
+	</type4>
+	<type5>
+		<saying></saying>
+	</type5>
+	<type6>
+		<saying></saying>
+	</type6>
+	<type7>
+		<saying></saying>
+	</type7>
+	<type8>
+		<saying></saying>
+	</type8>
+</dataroot>
